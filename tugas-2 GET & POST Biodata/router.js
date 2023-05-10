@@ -1,11 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-// BASE ENDPOINT
-router.get('/', (req, res) => {
-    res.send('<h1>Home!</h1>');
-});
-
 // ENDPOINT GET
 router.get('/biodata', (req, res) => {
     const nama = req.query.nama;
