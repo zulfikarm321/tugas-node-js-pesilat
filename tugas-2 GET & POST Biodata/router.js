@@ -3,10 +3,7 @@ const router = express.Router();
 
 // ENDPOINT GET
 router.get('/biodata', (req, res) => {
-    const nama = req.query.nama;
-    const tempat_lahir = req.query.tempat_lahir;
-    const tanggal_lahir = req.query.tanggal_lahir;
-    const alamat = req.query.alamat;
+    const { nama, tempat_lahir, tanggal_lahir, alamat } = req.query;
 
     res.send({
         nama,
@@ -18,10 +15,7 @@ router.get('/biodata', (req, res) => {
 
 // ENDPOINT POST
 router.post('/biodata', function (req, res) {
-    const nama = req.body.nama;
-    const tempat_lahir = req.body.tempat_lahir;
-    const tanggal_lahir = req.body.tanggal_lahir;
-    const alamat = req.body.alamat;
+    const { nama, tempat_lahir, tanggal_lahir, alamat } = req.body;
 
     res.send({
         nama,
