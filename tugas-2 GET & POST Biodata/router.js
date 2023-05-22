@@ -14,7 +14,7 @@ router.get('/biodata', (req, res) => {
 });
 
 // ENDPOINT POST
-router.post('/biodata', function (req, res) {
+router.post('/biodata',  (req, res) => {
     const { nama, tempat_lahir, tanggal_lahir, alamat } = req.body;
 
     res.send({
